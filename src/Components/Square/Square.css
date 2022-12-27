@@ -1,0 +1,39 @@
+.square {
+    font-size: 2rem;
+    font-weight: 600;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #3A3A3C;
+    background:none;
+    place-items: center;    
+}
+
+#correct {
+    border: none;
+    background: rgb(86,177,78);
+    animation: flip 1s linear;
+}
+
+#almost {
+    border: none;
+    background: rgb(112,112,112);
+    animation: flip 1s linear;
+}
+
+#wrong {
+    border: none;
+    background: orangered;
+    animation: flip 1s linear;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0);
+    }
+
+    100% {
+        transform: rotateX(360deg);
+    }
+}

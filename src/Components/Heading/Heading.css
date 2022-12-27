@@ -1,0 +1,7 @@
+.heading-h1{
+	font-size: var(--font-xxlg);
+	text-align: center;
+	font-weight: var(--font-xbold);
+	font-family: 'Roboto Slab', serif;
+	color: #ffffff;
+}

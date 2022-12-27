@@ -1,0 +1,21 @@
+Component A: 
+	People{
+		name: string;
+		age: number;
+		idcard: number;
+	}
+
+
+	<B people={People}/>
+
+
+
+Component B: 
+	interface Props {
+		
+	}
+	const B = (props) => {
+		return (
+
+		)
+	}

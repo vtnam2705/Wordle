@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {useSelector} from 'react-redux'
+import Heading from '../src/Components/Heading/Heading'
+import Board from '../src/Components/Board/Board'
+import Keyboard from '../src/Components/Keyboard/Keyboard'
+import {RootState} from '../src/Redux/store'
 
-function App() {
+
+const App:React.FC = () => {
+  const board = useSelector((state:RootState) => state.board.board)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Heading type="h1" text="Wordle"/>
+      <div className="main-container">
+        <div className="board-container">
+          <Board board={board}/>
+        </div>
+        <div className='keyboard'>
+          <Keyboard/>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
